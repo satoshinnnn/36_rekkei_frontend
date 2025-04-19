@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BookMark</title>
+  <link rel="stylesheet" href="./bt2.css">
+  <style>
+      .overlayBookmarkBox {
+      position: fixed; 
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%); 
+      z-index: 9999;
+      background: white;
+      width: 490px;
+      display: none;    /* display: none searchbox*/
+      }
+      .mainSearchPart {
+         display: flex;
+         flex-direction: column;
+         gap: 20px;
+         width: 450px;
+         margin: auto;
+         padding-bottom: 20px;
+         padding-top: 20px;
+      }
+      .save-btn {
+         width: 80px;
+         height: 34px;
+         color: white;
+         background-color: #7a5aaf;
+      }
+      .headSearchBar {
+         display: flex;
+         justify-content: space-between;
+         padding: 15px 22px;
+         background-color: #7b59b0;
+
+      }
+      .input {
+         width: 450px;
+         border-radius: 5px;
+         height: 35px;
+         border: 2px solid #ae9fc6;
+      }
+      .textHead {
+         color: white;
+      }
+      .textSearchBar {
+         color: #ae9fc6;
+      }
+      .h1 {
+         width: 300px;
+         padding: 10px 15px;
+         color: white;
+         background-color: rgba(0, 0, 0, 0.5);
+         margin: auto;
+      }
+      .add-btn {
+         width: 80px;
+         height: 34px;
+         color: white;
+         background-color: #7a5aaf;
+         border-radius: 5px;
+      }
+      .webNamePrompt {
+         display: none; 
+         color: red;
+      }
+      .urlPrompt {
+         display: none; 
+         color: red;
+      }
+      .ul {
+         display: grid;
+         list-style-type: none;
+         gap: 30px;
+      }
+      .li {
+         display: flex;
+         justify-content: space-between;
+         background-color: rgba(0, 0, 0, 0.3); /* Màu đen với độ trong suốt 50% */;
+         width: 250px;
+         padding: 5px;
+      }
+      .excludeSearchBox {
+         background-color: rgb(221, 160, 221);
+         height: 100vh;
+      }
+  </style>
+ 
+</head>
+<body>
+   <div class="excludeSearchBox">
+      <div>
+         <h1 class="h1">ADD BOOKMARK</h1>
+      </div>
+      <br>
+      <button class="add-btn">Thêm Bookmark</button>
+      <br>
+      <ul class="ul">
+      </ul>
+   </div>
+   <!-- overlay-box -->
+    <div class="overlayBookmarkBox">
+      <div class="headSearchBar">
+         <p class="textHead">Add Bookmark</p>
+         <p class="textHead exit-btn">X</p>   <!--exit-btn-->
+      </div>
+      <div class="mainSearchPart">
+         <div>
+            <p class="textSearchBar" >Website Name</p>
+            <br>
+            <input type="text" class="input inputWebName">   <!--inputWebName-->
+            <p class="webNamePrompt">Không được để trống!</p>
+         </div>
+         <div>
+            <p class="textSearchBar">Website URL</p>
+            <br>
+            <input type="text" class="input inputURL"> <!--inputURL-->
+            <p class="urlPrompt">Không được để trống!</p>   
+         </div>
+         <button class="save-btn">Save</button>   <!--save-btn-->
+      </div>
+    </div>
+   <script src="bt2.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bt4.css">
+    <style>
+        h1 {
+            text-align: center;
+        }
+        table, tr, td,th{
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 600px;
+            padding: 10px;
+        }
+        button {
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .prompt {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Danh sách nhân viên</h1>
+    <table class="table table1">
+        <tr>
+            <td>
+                <label for="name">Tên nhân viên</label>
+                <input type="text" class="inputName" name="name">
+            </td>
+            <td>
+                
+                <label for="position">Chức vụ</label>
+                <input type="text" class="inputPosition" name="position">
+            </td>
+        </tr>
+    </table>  
+    <p class="prompt">Không nhập đủ thông tin!</p>
+    <button class="add-btn">thêm nhân viên</button>
+    <table>
+        <tr>
+            <th>STT</th>
+            <th>Tên</th>
+            <th>Chức vụ</th>
+        </tr>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <button class="next-btn">Next</button>
+    <div class="btnContainer">
+    </div>
+    <button class="prev-btn">Prev</button>
+    <script src="bt4.js"></script>
+</body>
